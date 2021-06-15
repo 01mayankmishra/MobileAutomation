@@ -51,27 +51,7 @@ driver.findElementByAndroidUIAutomator
 ("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
 
 
-//			driver.findElement(By.id("com.herokuapp.javaprograms400:id/collapse_button")).click();
-//			driver.findElementByAndroidUIAutomator("UiSelector().text(\"Programs\")").click();
-//
-//			driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-//			while (driver.findElementsByXPath("//*[contains(@text,'Final Keyword')]").size() == 0) {
-//				// scroll
-//				Map<String, String> map = new HashMap<String, String>();
-//				map.put("command", "input touchscreen swipe 1007 1323 1007 1167");
-//				driver.executeScript("mobile:shell", map);
-//			}
-//
-//			driver.findElementByAndroidUIAutomator("UiSelector().text(\"Final Keyword\")").click();
-//
-//			
-//
-//			// String visibleText = "Final Keyword";
-//
-//			// driver.findElementByAndroidUIAutomator
-//			// ("new UiScrollable(new
-//			// UiSelector().scrollable(true).instance(0)).scrollIntoView(new
-//			// UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
+
       Thread.sleep(1000);
 		driver.quit();
 
