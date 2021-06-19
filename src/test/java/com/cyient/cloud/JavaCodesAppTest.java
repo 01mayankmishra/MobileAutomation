@@ -52,14 +52,14 @@ public class JavaCodesAppTest {
 
 		driver.findElementByAndroidUIAutomator("UiSelector().text(\"Final Keyword\")").click();
 
-		
+		Thread.sleep(3000);
 
-		// String visibleText = "Final Keyword";
+		String visibleText = "Floyd Triangle";
 
-		// driver.findElementByAndroidUIAutomator
-		// ("new UiScrollable(new
-		// UiSelector().scrollable(true).instance(0)).scrollIntoView(new
-		// UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
+		 driver.findElementByAndroidUIAutomator
+		 ("new UiScrollable(new
+		 UiSelector().scrollable(true).instance(0)).scrollIntoView(new
+		 UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
         Thread.sleep(5000);
 		driver.quit();
 
