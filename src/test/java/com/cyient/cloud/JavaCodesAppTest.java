@@ -8,10 +8,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
+@Test
 public class JavaCodesAppTest {
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 
@@ -41,7 +43,7 @@ public class JavaCodesAppTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.findElement(By.id("com.herokuapp.javaprograms400:id/collapse_button")).click();
 		driver.findElementByAndroidUIAutomator("UiSelector().text(\"Programs\")").click();
-
+		Thread.sleep(3000);
 		driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 		while (driver.findElementsByXPath("//*[contains(@text,'Final Keyword')]").size() == 0) {
 			// scroll
@@ -51,17 +53,17 @@ public class JavaCodesAppTest {
 		}
 
 		driver.findElementByAndroidUIAutomator("UiSelector().text(\"Final Keyword\")").click();
-
 		Thread.sleep(3000);
 
 		String visibleText = "Floyd Triangle";
 
-		 driver.findElementByAndroidUIAutomator
-		 ("new UiScrollable(new
-		 UiSelector().scrollable(true).instance(0)).scrollIntoView(new
-		 UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
-        Thread.sleep(5000);
+		driver.findElementByAndroidUIAutomator(
+				"new UiScrollable(newUiSelector().scrollable(true).instance(0)).scrollIntoView(newUiSelector().textContains(\""
+						+ visibleText + "\").instance(0))")
+				.click();
+		Thread.sleep(5000);
 		driver.quit();
 
 	}
 }
+
